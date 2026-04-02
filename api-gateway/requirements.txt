@@ -1,0 +1,4 @@
+-e fastapi
+uvicorn[standard]
+httpx
+pydantic

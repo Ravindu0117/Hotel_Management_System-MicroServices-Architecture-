@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Booking UI Gateway</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo" aria-hidden="true">CJ</div>
+        <div>
+          <div class="brand-title">Grand Hotel</div>
+          <div class="brand-subtitle">Management System</div>
+        </div>
+      </div>
+
+      <div class="sidebar-group-title">Main</div>
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <button class="nav-item" data-section="dashboard" aria-selected="true">
+          <span class="nav-icon" aria-hidden="true">▦</span>
+          <span>Dashboard</span>
+        </button>
+        <button class="nav-item" data-section="guests" aria-selected="false">
+          <span class="nav-icon" aria-hidden="true">👤</span>
+          <span>Guests</span>
+        </button>
+        <button class="nav-item" data-section="rooms" aria-selected="false">
+          <span class="nav-icon" aria-hidden="true">🛏</span>
+          <span>Rooms</span>
+        </button>
+        <button class="nav-item" data-section="bookings" aria-selected="false">
+          <span class="nav-icon" aria-hidden="true">📅</span>
+          <span>Bookings</span>
+        </button>
+
+        <div class="sidebar-group-title">Management</div>
+        <button class="nav-item" data-section="payments" aria-selected="false">
+          <span class="nav-icon" aria-hidden="true">💳</span>
+          <span>Payments</span>
+        </button>
+        <button class="nav-item" data-section="staff" aria-selected="false">
+          <span class="nav-icon" aria-hidden="true">🧑‍💼</span>
+          <span>Staff</span>
+        </button>
+        <button class="nav-item" data-section="feedbacks" aria-selected="false">
+          <span class="nav-icon" aria-hidden="true">💬</span>
+          <span>Feedback</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="muted">© 2026 Grand Hotel HMS</div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn" id="sidebarToggle" type="button" aria-label="Toggle sidebar">☰</button>
+        </div>
+        <div class="topbar-right">
+          <button class="icon-btn" type="button" aria-label="Notifications">🔔</button>
+          <div class="avatar" aria-label="User">AD</div>
+        </div>
+      </header>
+
+      <main class="content" aria-live="polite">
+        <div class="page-head">
+          <div>
+            <h1 class="page-title" id="pageTitle">Dashboard</h1>
+            <p class="page-subtitle" id="pageSubtitle">Welcome back. Here's your hotel overview.</p>
+          </div>
+          <div class="page-actions" id="pageActions"></div>
+        </div>
+
+        <div id="content"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="toast-wrap" id="toastWrap" aria-live="assertive" aria-relevant="additions"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
